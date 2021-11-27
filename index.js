@@ -1,3 +1,4 @@
+alert("Hola Mundo");
 var nombre = prompt("Escriba su nombre");
 var apellido = prompt("Escriba su apellido");
 

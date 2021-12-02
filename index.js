@@ -17,7 +17,3 @@ if(nombre !=="" && apellido !=="" && parseInt(edad) >= 18) {
 } else {
     alert("Error en ingreso de edad, no puedes acceder. Hasta pronto")
 }
-
-
-
-

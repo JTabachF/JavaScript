@@ -33,6 +33,17 @@
         <p>Banco Estafa</p>
         <p>Todos los derechos reservados</p>
     </footer>
-    <script src="/js/Desafio3.js"></script>
+    <script src="/js/desafio_funcion.js"></script>
+    <script language="javascript">
+        /*Main code*/
+        seleccionTramite();
+        if (seleccionTramite()==1){
+            tramiteCredito();
+        }else if (seleccionTramite()==2){
+            tramiteTarjeta();
+        }else {
+            alert("Error")
+        }
+        </script>
   </body>
 </html>

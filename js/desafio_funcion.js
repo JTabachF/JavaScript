@@ -24,7 +24,7 @@ function seleccionTramite() {
             }
         }
     }
-    //return opcion;
+    return opcion;
 }
 
 function tramiteCredito() {

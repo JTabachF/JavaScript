@@ -35,11 +35,10 @@
     </footer>
     <script src="./js/desafio_funcion.js"></script>
     <script language="javascript">
-        /*Main code*/
-        seleccionTramite();
-        if (seleccionTramite()==1){
+        let resultadoF = seleccionTramite();
+        if (resultadoF==1){
             tramiteCredito();
-        }else if (seleccionTramite()==2){
+        }else if (resultadoF==2){
             tramiteTarjeta();
         }else {
             alert("Error")

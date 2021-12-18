@@ -5,6 +5,69 @@
         +
     -Tarjeta de Crédito*/
 
+let simulacion = [];
+
+    class creditos {
+        constructor (nombreCliente, tipoCredito, monto, cuotas, seguro, montoCuotas, montoTotal){
+    
+            this.nombreCliente = nombreCliente;
+            this.tipoCredito = tipoCredito;
+            this.monto = monto;
+            this.cuotas = cuotas;
+            this.seguro = seguro;
+            this.montoCuotas = montoCuotas;
+            this.montoTotal = montoTotal;  
+        }
+        getCuotaFinal() {
+            return (creditos.monto /creditos.cuotas)*1.19;
+            //this.montoCuotas*1.19;
+        }
+        getMontoTotal() {
+            return this.getCuotaFinal()*this.cuotas
+        }
+    }
+    
+   
+    //Agregando objetos al array desde usuario
+let nombre = prompt("Bienvenido al Banco Estafa.\nPor favor ingrese su nombre");
+    
+    function agregaSimulacion(){
+        let nombreCliente = nombre;
+        let tipoCredito =prompt("Ingrese tipo de crédito (Consumo, Hipotecario o Automotriz");
+        let monto =parseInt(prompt("Ingrese monto a solicitar"));
+        let cuotas =parseInt(prompt("Ingrese cantidad de cuotas deseadas"));
+        let seguro =prompt("Solicita seguros (Si, No)");
+        let montoCuotas =(monto/cuotas)*1.19;
+        let montoTotal =montoCuotas*cuotas;
+        const sim =new creditos(nombreCliente, tipoCredito, monto, cuotas, seguro, montoCuotas, montoTotal)
+        simulacion.push(sim)
+    }
+    agregaSimulacion()
+    
+    function pregunta(){
+    
+        if(confirm("Quiere simular otro tipo de crédito y/o monto?")==true){
+            agregaSimulacion()
+            pregunta()
+        }else{
+            alert("Gracias, hasta pronto")
+        }
+    }
+    pregunta()
+    
+    //Ordenamiento por monto del crédito de menor a mayor
+    simulacion.sort(function(menorMonto,mayorMonto) {
+        return menorMonto.monto - mayorMonto.monto;});
+    
+    console.log(simulacion);    
+
+
+
+
+
+
+
+
 class credito {
 
     constructor (tipoCredito, monto, cuotas, seguro, montoCuotas, montoTotal) { 

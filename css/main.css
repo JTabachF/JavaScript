@@ -1,10 +1,9 @@
 
 
 .fondo {
-    background: rgb(255,252,203);
-    background: radial-gradient(circle, rgba(255,252,203,1) 68%, rgba(255,237,189,1) 74%);
-    padding: 0;
-    margin: 0;
+    background:white;
+    border-style: groove 4px;
+    border: none;
 }
 .section {
     text-align: center;
@@ -12,4 +11,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.carrousel {
+    max-width: 100vw;
+    max-height: 90vh;
+    min-width: 100vw;
+    min-height: 90vh;
+    object-fit:fill;
+}
+.colorText {
+    color:whitesmoke;
+}
+.letraGrande {
+    font-size: xx-large;
+    font-weight: 700;
+}
+.imgTamano {
+object-fit: contain;
+}
+.orden {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: center;
 }

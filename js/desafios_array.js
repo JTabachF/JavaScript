@@ -1,4 +1,13 @@
-let simulacion = [];
+localStorage.setItem("1","Arroz");
+localStorage.setItem("2","Papel Higienico");
+localStorage.setItem("3","Cerveza");
+
+for (let i=0; 1<localStorage.length;i++){
+    console.log(localStorage.getItem)
+}
+
+
+/*let simulacion = [];
 
 class creditos {
     constructor (nombreCliente, tipoCredito, monto, cuotas, seguro, montoCuotas, montoTotal){

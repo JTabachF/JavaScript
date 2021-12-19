@@ -10,7 +10,7 @@ const opcionSeguro = document.querySelector("#opcion-seguro");
 
 const listaSimulaciones = document.querySelector("#lista-simulaciones");
 
-//
+//JSON en localstorage
 let arraySimulaciones = JSON.parse(localStorage.getItem("arraySimulaciones")) || [];
 
 if (arraySimulaciones.length) {
@@ -45,6 +45,8 @@ function cargarSimulaciones() {
 	);
 	actualizarLocalStorage(arraySimulaciones);
 	imprimirSimulaciones(arraySimulaciones);
+
+
 }
 
 function imprimirSimulaciones(array) {
@@ -63,6 +65,7 @@ function imprimirSimulaciones(array) {
           <button type="submit" class="btn btn-primary">Solicitar Simulación</button>
           <hr>`;
 		listaSimulaciones.innerHTML += cardSimulaciones;
+
 	});
 }
 
@@ -70,17 +73,8 @@ function imprimirSimulaciones(array) {
 function actualizarLocalStorage(array) {
 	localStorage.setItem("arraySimulaciones", JSON.stringify(array));
 }
-
-// funcion para resetear los imputs
-function borrarInputs() {
-	nombre.value = "";
-	apellido.value = "";
-	dni.value = "";
-	email.value = "";
-	opCredito.value = "";
-	monto.value = "";
-	cuotas.value = "";
-	opSeguro.value = "";
-	montoCuotas.value = "";
-	montoTotal.value = "";
+//Borrar titulo
+if (arraySimulaciones.length>0) {
+const eliminar = document.getElementById("sinSimu");
+sinSimu.parentElement.removeChild(eliminar);
 }
